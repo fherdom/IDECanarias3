@@ -1,0 +1,39 @@
+# This file contains metadata for your plugin. Since 
+# version 2.0 of QGIS this is the proper way to supply 
+# information about a plugin. The old method of 
+# embedding metadata in __init__.py will 
+# is no longer supported since version 2.0.
+
+# This file should be included when you package your plugin.# Mandatory items:
+
+[general]
+name=Búsquedas IDECanarias
+qgisMinimumVersion=3.0
+description=Este complemento permite realizar búsquedas en la toponimia de Canarias.
+version=0.1
+author=Félix José Hernández
+email=fhernandeze@grafcan.com
+
+about=Este complemento permite realizar búsquedas inteligentes en la toponimia de Canarias
+
+tracker=https://github.com/fherdom/IDECanarias3/issues
+repository=https://github.com/fherdom/IDECanarias3.git
+# End of mandatory metadata
+
+# Recommended items:
+
+# Uncomment the following line and add your changelog:
+# changelog=
+
+# Tags are comma separated with spaces allowed
+tags=python
+
+homepage=https://www.grafcan.com
+category=Plugins
+icon=icon.png
+# experimental flag
+experimental=False
+
+# deprecated flag (applies to the whole plugin, not just a single version)
+deprecated=False
+
