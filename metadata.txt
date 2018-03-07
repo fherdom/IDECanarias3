@@ -7,14 +7,13 @@
 # This file should be included when you package your plugin.# Mandatory items:
 
 [general]
-name=Búsquedas IDECanarias
+name=IDECanarias
 qgisMinimumVersion=3.0
-description=Este complemento permite realizar búsquedas en la toponimia de Canarias.
-version=0.1
+description=The plugin allows you to search all locations of Canary Islands.
+version=3.1
 author=Félix José Hernández
 email=fhernandeze@grafcan.com
-
-about=Este complemento permite realizar búsquedas inteligentes en la toponimia de Canarias
+about=The plugin allows you to search all locations of Canary Islands, Spain
 
 tracker=https://github.com/fherdom/IDECanarias3/issues
 repository=https://github.com/fherdom/IDECanarias3.git
@@ -28,7 +27,7 @@ repository=https://github.com/fherdom/IDECanarias3.git
 # Tags are comma separated with spaces allowed
 tags=python
 
-homepage=https://www.grafcan.com
+homepage=http://www.idecanarias.es
 category=Plugins
 icon=icon.png
 # experimental flag
