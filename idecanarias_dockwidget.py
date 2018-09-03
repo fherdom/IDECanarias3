@@ -142,7 +142,7 @@ class IDECanariasDockWidget(QtWidgets.QDockWidget, FORM_CLASS):
 
         if not self.ui.chkBBOX:
             url = QUrl(
-                'http://visor.grafcan.es/busquedas/toponimoxml/1/50/'
+                'https://visor.grafcan.es/busquedas/toponimoxml/1/50/'
                 '?texto=%s' % texto
             )
         else:
@@ -155,7 +155,7 @@ class IDECanariasDockWidget(QtWidgets.QDockWidget, FORM_CLASS):
             ]
             url = QUrl(
                 (
-                    'http://visor.grafcan.es/busquedas/toponimoxmlbbox'
+                    'https://visor.grafcan.es/busquedas/toponimoxmlbbox'
                     '/1/10/%s,%s,%s,%s/0/0/?texto=%s'
                 ) % (
                     bbox[0], bbox[1], bbox[2], bbox[3],
@@ -183,6 +183,7 @@ class IDECanariasDockWidget(QtWidgets.QDockWidget, FORM_CLASS):
         self.ui.tblResult.setRowCount(0)
         self.ui.tblResult.setHorizontalHeaderLabels(self.tblResultHeader)
 
+        e = None
         self.lid = []
         lidd = []
         root = doc.documentElement()
@@ -305,7 +306,7 @@ class IDECanariasDockWidget(QtWidgets.QDockWidget, FORM_CLASS):
         id = self.lid[i][0]
         self.i = i
         url = QUrl(
-            'http://visor.grafcan.es/busquedas/toponimiagml/1/50/qgis'
+            'https://visor.grafcan.es/busquedas/toponimiagml/1/50/qgis'
             '/1/%d/' % int(id)
         )
         req = QNetworkRequest(url)

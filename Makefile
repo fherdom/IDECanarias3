@@ -38,13 +38,13 @@ LOCALES =
 # translation
 SOURCES = \
 	__init__.py \
-	idecanarias.py idecanarias_dockwidget.py
+	idecanarias.py idecanarias_dockwidget.py utils.py
 
 PLUGINNAME = idecanarias
 
 PY_FILES = \
 	__init__.py \
-	idecanarias.py idecanarias_dockwidget.py
+	idecanarias.py idecanarias_dockwidget.py utils.py
 
 UI_FILES = idecanarias_dockwidget_base.ui
 
@@ -97,7 +97,8 @@ test: compile transcompile
 	@echo "e.g. source run-env-linux.sh <path to qgis install>; make test"
 	@echo "----------------------"
 
-deploy: compile doc transcompile
+# deploy: compile doc transcompile
+deploy: compile 
 	@echo
 	@echo "------------------------------------------"
 	@echo "Deploying plugin to your .qgis2 directory."
@@ -111,9 +112,9 @@ deploy: compile doc transcompile
 	cp -vf $(COMPILED_RESOURCE_FILES) $(HOME)/$(QGISDIR)/python/plugins/$(PLUGINNAME)
 	cp -vf $(EXTRAS) $(HOME)/$(QGISDIR)/python/plugins/$(PLUGINNAME)
 	cp -vfr i18n $(HOME)/$(QGISDIR)/python/plugins/$(PLUGINNAME)
-	cp -vfr $(HELP) $(HOME)/$(QGISDIR)/python/plugins/$(PLUGINNAME)/help
+	# cp -vfr $(HELP) $(HOME)/$(QGISDIR)/python/plugins/$(PLUGINNAME)/help
 	# Copy extra directories if any
-	(foreach EXTRA_DIR,(EXTRA_DIRS), cp -R (EXTRA_DIR) (HOME)/(QGISDIR)/python/plugins/(PLUGINNAME)/;)
+	# (foreach EXTRA_DIR,(EXTRA_DIRS), cp -R (EXTRA_DIR) (HOME)/(QGISDIR)/python/plugins/(PLUGINNAME)/;)
 
 
 # The dclean target removes compiled python files from plugin directory
