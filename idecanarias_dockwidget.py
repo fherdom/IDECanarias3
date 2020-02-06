@@ -84,7 +84,7 @@ class IDECanariasDockWidget(QtWidgets.QDockWidget, FORM_CLASS):
         )
         self.DEBUG = True
         self.filenamelog = filenamelog
-        self.chkBBOX = False
+        self._chkBBOX = False
         self.i = 0
         self.lid = []
         self._radio = 0
@@ -140,7 +140,7 @@ class IDECanariasDockWidget(QtWidgets.QDockWidget, FORM_CLASS):
         if not texto:
             texto = "grafcan"
 
-        if not self.ui.chkBBOX:
+        if not self.ui.chkBBOX.isChecked():
             url = QUrl(
                 'https://visor.grafcan.es/busquedas/toponimoxml/1/50/'
                 '?texto=%s' % texto
